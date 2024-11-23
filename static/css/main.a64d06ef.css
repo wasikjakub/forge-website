@@ -1,0 +1,2 @@
+@keyframes slideIn{0%{opacity:0;transform:translateX(100%)}to{opacity:1;transform:translateX(0)}}.container{align-items:center;animation:slideIn 1.5s ease-in-out;background-image:url(/forge-website/static/media/theme.7df58105b4609b101aa6.png);background-position:50%;background-size:cover;display:flex;height:100vh;justify-content:center}.logo{height:auto;max-width:100%;width:300px}
+/*# sourceMappingURL=main.a64d06ef.css.map*/
