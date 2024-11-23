@@ -1,27 +1,77 @@
-@keyframes slideIn {
-  from {
-    transform: translateX(100%); /* Start off-screen to the right */
-    opacity: 0; /* Start fully transparent */
-  }
-  to {
-    transform: translateX(0); /* Move to the center */
-    opacity: 1; /* Fully visible */
-  }
-}
+/* App.css */
 
 .container {
   height: 100vh; /* Full screen height */
   display: flex;
+  flex-direction: column; /* Stack logo and buttons vertically */
   justify-content: center;
   align-items: center;
-  background-image: url('../public/images/theme.png'); /* Accessing from public/images */
-  background-size: cover;
-  background-position: center;
-  animation: slideIn 1.5s ease-in-out; /* Longer duration and smoother easing */
+  /* background-image: url('./images/theme.png'); Background image from src/images */
+  background-size: cover; /* Make sure the image covers the full page */
+  background-position: center; /* Center the background */
+  animation: fadeIn 2s ease-in-out; /* Apply fade-in effect */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with the background fully transparent */
+  }
+  to {
+    opacity: 1; /* End with the background fully visible */
+  }
 }
 
 .logo {
-  width: 300px;
+  width: 300px; /* Logo width */
   max-width: 100%;
   height: auto;
+  margin-bottom: 20px; /* Space between logo and buttons */
 }
+
+.buttons-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;
+}
+
+.button {
+  margin: 3px; /* Space between buttons */
+  padding: 5px 5px; /* Padding inside the button */
+  font-size: 13px; /* Font size of the text */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* In App.css */
+.noto-serif-jp-regular {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+.button {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+  color: black; /* Text color (blue) */
+  padding: 10px 20px; /* Padding around the text */
+  border: transparent; /* Border color (blue) */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  background-color: transparent; /* No background */
+  transition: all 0.3s ease; /* Smooth transition for all changes */
+}
+
+.button:hover {
+  background-color: #f0f0f0; /* Blue background on hover */
+  color: black; /* Change text color to white on hover */
+}
+
