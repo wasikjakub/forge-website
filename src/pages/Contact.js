@@ -1,12 +1,13 @@
-// src/pages/Lookbook.js
+// src/pages/Contact.js
 import React from 'react';
+import './Contact.css'; // Import the associated CSS file for Contact
 
-function Lookbook() {
+function Contact() {
   return (
-    <div>
+    <div className="contact-container">
       <h2>Contact Page</h2>
     </div>
   );
 }
 
-export default Lookbook;
+export default Contact;

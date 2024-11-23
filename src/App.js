@@ -1,45 +1,33 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';  // Import react-router-dom
-import logo from './images/logo.png';  // Import logo image
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, Link } from 'react-router-dom';
 
-// Import page components
+// Import your page components
+import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Lookbook from './pages/Lookbook';
 import Contact from './pages/Contact';
+import Lookbook from './pages/Lookbook';
 import Info from './pages/Info';
 
-function App() {
-  return (
-    <Router>
-      {/* Main navigation and layout */}
-      <div className="container">
-        <img src={logo} alt="Logo" className="logo" />
-        <div className="buttons-container">
-          {/* Navigation buttons */}
-          <Link to="/shop">
-            <button className="button">Shop</button>
-          </Link>
-          <Link to="/lookbook">
-            <button className="button">Lookbook</button>
-          </Link>
-          <Link to="/contact">
-            <button className="button">Contact</button>
-          </Link>
-          <Link to="/info">
-            <button className="button">Info</button>
-          </Link>
-        </div>
-      </div>
+// Import Header component
+import Header from './components/Header';
 
-      {/* Routes to render pages */}
+function App() {
+  const location = useLocation(); // To check the current route
+
+  return (
+    <div>
+      {/* Show Header only if not on the Home page */}
+      {location.pathname !== '/' && <Header />}
+
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/lookbook" element={<Lookbook />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/lookbook" element={<Lookbook />} />
         <Route path="/info" element={<Info />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </Router>
+    </div>
   );
 }
 

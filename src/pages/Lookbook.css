@@ -1,0 +1,9 @@
+/* src/pages/Lookbook.css */
+
+.lookbook-container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text inside the div */
+  }
