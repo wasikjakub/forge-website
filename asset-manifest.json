@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/forge-website/static/css/main.a64d06ef.css",
-    "main.js": "/forge-website/static/js/main.71129f0d.js",
-    "static/media/theme.png": "/forge-website/static/media/theme.7df58105b4609b101aa6.png",
+    "main.css": "/forge-website/static/css/main.aa0cef1d.css",
+    "main.js": "/forge-website/static/js/main.046563a8.js",
+    "static/media/logo.png": "/forge-website/static/media/logo.b79c188fe41fc77fdbb8.png",
     "index.html": "/forge-website/index.html",
-    "main.a64d06ef.css.map": "/forge-website/static/css/main.a64d06ef.css.map",
-    "main.71129f0d.js.map": "/forge-website/static/js/main.71129f0d.js.map"
+    "main.aa0cef1d.css.map": "/forge-website/static/css/main.aa0cef1d.css.map",
+    "main.046563a8.js.map": "/forge-website/static/js/main.046563a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.a64d06ef.css",
-    "static/js/main.71129f0d.js"
+    "static/css/main.aa0cef1d.css",
+    "static/js/main.046563a8.js"
   ]
 }
